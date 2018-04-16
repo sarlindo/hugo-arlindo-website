@@ -63,8 +63,7 @@ pre {
   padding: 2rem 1rem;
   color: rgba(255,255,255,.5);
   background-color: #422542;
-  /*300030*/
-  /*263238*/
+  /* #343a40 */
 }
 @media (min-width: 48em) {
   .sidebar {
