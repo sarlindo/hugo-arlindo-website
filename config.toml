@@ -1,0 +1,43 @@
+baseURL =  "http://arlindo.ca/"
+languageCode = "en-us"
+title = "Arlindo"
+
+## Site Settings
+[params]
+    author = "Arlindo"
+    title = "Arlindo Santos"
+    description = "The missing puzzle piece for solving your I.T. problem."
+    authorimage = "/img/arlindo.jpg"
+    dateformat = "Jan 2, 2006"
+    highlightjs = true
+    # highlightjsstyle = "github"
+    # please choose either GraphComment or Disqus
+    # GraphCommentId = "your-graph-comment-id" 
+
+## Social Accounts
+[params.social]
+    github = "sarlindo"
+    linkedin = "arlindo-santos-62ab4854"
+    email = "sarlindo@hotmail.com"
+
+## Main Menu
+[[menu.main]]
+    name = "About"
+    identifier = "about"
+    weight = 100
+    url = "/about/"
+[[menu.main]]
+    name = "Resume"
+    weight = 200
+    identifier = "resume"
+    url = "/resume/"
+[[menu.main]]
+    name = "Photo Gallery"
+    weight = 300
+    identifier = "photos"
+    url = "/photos/"
+[[menu.main]]
+    name = "Blog"
+    identifier = "blog"
+    weight = 400
+    url = "/blog/"
