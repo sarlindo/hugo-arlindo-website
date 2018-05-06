@@ -2,6 +2,7 @@ baseURL =  "http://arlindo.ca/"
 languageCode = "en-us"
 title = "Arlindo"
 
+
 ## Site Settings
 [params]
     author = "Arlindo"
@@ -10,6 +11,7 @@ title = "Arlindo"
     authorimage = "/img/arlindo.jpg"
     dateformat = "Jan 2, 2006"
     highlightjs = true
+    googleAnalytics = "UA-56647337-2"
     # highlightjsstyle = "github"
     # please choose either GraphComment or Disqus
     # GraphCommentId = "your-graph-comment-id" 
