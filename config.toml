@@ -2,6 +2,7 @@ baseURL =  "http://arlindo.ca/"
 languageCode = "en-us"
 title = "Arlindo"
 
+
 ## Site Settings
 [params]
     author = "Arlindo"
