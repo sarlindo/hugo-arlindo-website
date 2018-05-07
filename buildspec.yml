@@ -2,4 +2,4 @@ phases:
   build:
     commands:
       - echo "******** Uploading to S3 ********"
-      - aws s3 sync / s3://input.arlindo.ca
+      - aws s3 sync $CODEBUILD_SRC_DIR/ s3://input.arlindo.ca
