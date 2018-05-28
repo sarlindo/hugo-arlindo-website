@@ -2,7 +2,7 @@ baseURL =  "http://arlindo.ca/"
 languageCode = "en-us"
 title = "Arlindo"
 googleAnalytics = "UA-56647337-2"
-disqusShortname = "www-arlindo-ca.disqus.com"
+disqusShortname = "www-arlindo-ca"
 
 ## Site Settings
 [params]
