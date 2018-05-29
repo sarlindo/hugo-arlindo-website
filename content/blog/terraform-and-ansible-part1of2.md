@@ -25,8 +25,6 @@ I have been using Ansible since about 2015 and it has been my goto tool for conf
 In the past, I briefly looked at AWS Cloudformation and Terraform as IAC tools to assist with AWS infrastructure provisioning, but never had the opportunity to really dive in. At the time, I was leaning heavily towards Terraform, for the fact that Terraform had a plan step that outlines all the changes it's going to make before actually making them, it's HCL syntax was easier to read than JSON, it supported modules for better DRY principals and it worked with multiple cloud providers. This last point about Terraform multi-cloud support is sort of misleading because you still need to understand each cloud provider and code accordingly, it's not like they have some sort of higher level abstraction api that works across all cloud providers, that would be nice, but probably very difficult to achieve without api standardization across cloud providers (not happening any time soon). However, you still use the same Terraform tool, which was a key sticking point for me.
 
 I know a lot has changed with Cloudformation, it now supports YAML format, it has drift detection, it supports stacksets for better modularization of your code base, it can handle rollbacks, which is something Terraform can't do.
-Though not the focus of this writing
-
 
 ## Though not the focus of this writing
 
@@ -76,7 +74,9 @@ What I didn't realize is that Terraform can only manage all the dependencies fro
 
 Now if I want to destroy, I basically need to destroy in reverse order. 
 
-Really… This is one of the primary reasons for not using ansible, I don't want to remember this dependency stuff. 
+### Really… 
+
+This is one of the primary reasons for not using ansible, I don't want to remember this dependency stuff. 
 
 The bottom line is this… there is a trade-off you need to decide on, which is level of isolation, the more isolation, the more you need to manage dependencies yourself, but also less risk of breaking things. 
 
@@ -88,6 +88,7 @@ Terraform by default will maintain state locally from where you are running Terr
 
 So I chose to use AWS S3 as my backend storage location for the state file. To set up a backend you basically need to include this in your Terraform codebase.
 
+```
  terraform {
   backend "s3" {
     bucket = "bucket.com"
@@ -95,6 +96,7 @@ So I chose to use AWS S3 as my backend storage location for the state file. To s
     region = "us-east-1"
   }
 }
+```
 
 Now in order to keep things DRY and not have to hardcode things, I thought to include variables that can be passed into Terraform and it would interpolate all the variables provided as an example:
 
@@ -232,7 +234,7 @@ Hey, I think Ansible can actually help here and be that glue that orchestrates t
 
 This is when I decided to search google to see if others are doing the same thing, however I didn't find much except I do see a lot of people using Terraform then executing Ansible provisioners to actually perform the config management side of things. Maybe what I am proposing is some sort of anti-pattern? In any case, I think it will work just fine for me. 
 
-Now I have only been using Terraform for about 1 month, so I am sure some of the issues I mentioned are either irrelevant or there exists a better way? Let me know. 
+Now I have only been using Terraform for about 1 month since this writing, so I am sure some of the issues I mentioned are either irrelevant now or there exists a better way? Let me know. 
 
 
 ### In part 2, I will explore using Ansible with Terraform and propose a CI/CD pipeline.
