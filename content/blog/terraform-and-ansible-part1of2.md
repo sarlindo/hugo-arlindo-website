@@ -187,7 +187,7 @@ module "security-group-mysql" {
   egress_rules = ["all-all"]
 }
 ```
-In the above example, I am basically calling the terraform-aws-modules/security-group/aws module 2 times to create different security groups in AWS. However there is still a bit of duplication here, I would instead like to be able to invoke the terraform-aws-modules/security-group/aws module in a loop and alter the variable input instead to keep the codebase a little more DRY.
+In the above example, I am basically calling the terraform-aws-modules/security-group/aws module 2 times to create different security groups in AWS. However there is still a bit of duplication here, I would instead like to be able to invoke the terraform-aws-modules/security-group/aws module in a loop and alter the variable input to keep the codebase a little more DRY.
 
 
 ## Wait… there is Terragrunt that can help with alot of these issues...
