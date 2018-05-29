@@ -10,7 +10,7 @@
 {{- end }}
 <!-- Disqus-->
 
-{{ if .Site.GetPage "section" "blog" }}
+{{ if .Site.GetPage "section" "blog" -}}
 
 {{ if .Site.DisqusShortname -}}
     {{ if ne .Params.showcomments false }}
@@ -21,4 +21,4 @@
     {{ partial "commenting_graph.html" . }}
 {{- end }}
 
-{{ - end }}
+{{- end }}
