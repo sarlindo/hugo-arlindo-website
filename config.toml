@@ -2,8 +2,6 @@ baseURL =  "http://arlindo.ca/"
 languageCode = "en-us"
 title = "Arlindo"
 googleAnalytics = "UA-56647337-2"
-disqusShortname = "www-arlindo-ca"
-
 
 ## Site Settings
 [params]
@@ -44,3 +42,4 @@ disqusShortname = "www-arlindo-ca"
     identifier = "blog"
     weight = 400
     url = "/blog/"
+    disqusShortname = "www-arlindo-ca"
