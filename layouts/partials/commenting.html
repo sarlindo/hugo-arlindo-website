@@ -10,8 +10,6 @@
 {{- end }}
 <!-- Disqus-->
 
-{{ if .Site.GetPage "section" "blog" -}}
-
 {{ if .Site.DisqusShortname -}}
     {{ if ne .Params.showcomments false }}
         <h2>Comments</h2>
@@ -19,6 +17,4 @@
     {{ end }}  
 {{ else if .Site.Params.GraphCommentId -}}
     {{ partial "commenting_graph.html" . }}
-{{- end }}
-
 {{- end }}
