@@ -4,13 +4,13 @@ description = ""
 tags = [
     "Terraform",
     "Ansible",
-    "Development",
+    "Development"
 ]
 date = "2018-05-29"
 categories = [
-    "Terraform"
+    "Terraform",
     "Development",
-    "Ansible",
+    "Ansible"
 ]
 +++
 
