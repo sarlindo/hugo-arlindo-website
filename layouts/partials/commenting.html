@@ -9,7 +9,7 @@
 </script>
 {{- end }}
 <!-- Disqus-->
-
+{{ if (strings.Contains .RelPermalink "blog") }}
 {{ if .Site.DisqusShortname -}}
     {{ if ne .Params.showcomments false }}
         <h2>Comments</h2>
@@ -18,3 +18,4 @@
 {{ else if .Site.Params.GraphCommentId -}}
     {{ partial "commenting_graph.html" . }}
 {{- end }}
+{{ end }}
