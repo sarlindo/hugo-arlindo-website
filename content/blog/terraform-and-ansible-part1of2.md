@@ -35,14 +35,14 @@ Like Ansible and a lot of these tools, it's very quick to get started but…if n
 ## So it's time to try something different. Let’s dive into Terraform!
 
 
-### Installation....
+### Installation...
 
 
 
 Installation was pretty straight forward, simply download the Terraform zip for you platform and extract the binary to your directory. 
 
 
-### Key requirements....
+### Key requirements...
 
 
 One of the key things for me is to start off with a good project directory structure that encompasses these key requirements:
@@ -190,7 +190,7 @@ module "security-group-mysql" {
 In the above example, I am basically calling the terraform-aws-modules/security-group/aws module 2 times to create different security groups in AWS. However there is still a bit of duplication here, I would instead like to be able to invoke the terraform-aws-modules/security-group/aws module in a loop and alter the variable input to keep the codebase a little more DRY.
 
 
-## Wait… there is Terragrunt that can help with alot of these issues...
+## Wait… there is Terragrunt that can help with alot of these issues.
 
 
 There exists a tool called Terragrunt which is basically a wrapper for Terraform and has it's own stanza that you basically embed into your Terraform for example:
